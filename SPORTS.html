@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPORTS</title>
+    <link rel="stylesheet" href="SPORTS.css">
+</head>
+<body background="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjB0ZXh0dXJlfGVufDB8fDB8fHww&w=1000&q=80" style="background-repeat: no-repeat; background-size: cover;">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="SHOWS.html">TV SHOWS</a></li>
+            <li><a href="MOVIES.html">MOVIES</a></li>
+            <li><a href="MUSIC.html">SONGS</a></li>
+            <li><a href="SPORTS.html">SPORTS</a></li>
+        </ul>
+        
+    </div>
+    <div class="slideshow-container" align="center">
+        <div class="slideshow-card">
+            <img src="https://crickettimes.com/wp-content/uploads/2023/08/ICC-ODI-World-Cup-2023-Updated-Schedule.webp" alt="Movie 1"><br><br>
+        </div>
+        <div class="slideshow-card">
+            <img src="https://www.sportstime247.com/wp-content/uploads/2023/09/India-vs-australia-2023-schedule.jpg" alt="Movie 2"><br><br>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slideshow-card");
+            const dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = "dot";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+        }
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+        function autoSlide() {
+            showSlide(slideIndex += 1);
+        }
+        setInterval(autoSlide, 3000);
+        showSlide(slideIndex);
+    </script><br><br>
+    <table align="center">
+        <tr><td>
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/NcOFdfG4re8/maxresdefault.jpg" style=width:250px height=220px>
+                <P><b>IND VS AUS <BR>ODI 24 SEP</b></P>
+                <a href="#" class="play-button">Play</a>
+                <a href="#" class="download-button">Download</a>
+              </div>
+        </td></tr>
+    </table>
+
+
+</body>
+</html>

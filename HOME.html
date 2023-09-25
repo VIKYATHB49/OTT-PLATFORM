@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="HOME.css">
+</head>
+<body background="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjB0ZXh0dXJlfGVufDB8fDB8fHww&w=1000&q=80" style="background-repeat: no-repeat; background-size: cover;">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="SHOWS.html">TV SHOWS</a></li>
+            <li><a href="MOVIES.html">MOVIES</a></li>
+            <li><a href="MUSIC.html">SONGS</a></li>
+            <li><a href="SPORTS.html">SPORTS</a></li>
+        </ul>
+        
+    </div>
+    <div class="slideshow-container" align="center">
+        <div class="slideshow-card">
+            <img src="Avatar.jpg" alt="Movie 1"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-card">
+            <img src="Biggboss7.webp" alt="Movie 2"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-card">
+            <img src="GOT.jpg" alt="Movie 3"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slideshow-card");
+            const dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = "dot";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+        }
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+        function autoSlide() {
+            showSlide(slideIndex += 1);
+        }
+        setInterval(autoSlide, 3000);
+        showSlide(slideIndex);
+    </script><br><br>
+    <table align="center">
+        <caption><h2>TRENDING</h2>
+        </caption>
+        <tr><td>
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/NcOFdfG4re8/maxresdefault.jpg" style=width:250px height=220px>
+                <P><b>IND VS AUS <BR>ODI 24 SEP</b></P>
+                <a href="#" class="play-button">Play</a>
+                <a href="#" class="download-button">Download</a>
+              </div>
+        </td>
+        <td>
+            <div class="card">
+                <img src="https://cdn.siasat.com/wp-content/uploads/2022/07/Bigg-Boss-16.jpg" style=width:250px height=220px>
+                <P><b>BIGG BOSS</b></P>
+                <a href="#" class="play-button">Play</a>
+                <a href="#" class="download-button">Download</a>
+              </div>
+
+        </td>
+    </tr>
+    </table>
+    <table align="center">
+        <caption><h2>SONGS</h2></caption>
+        <tr>
+          <td>
+            <div class="card">
+              <img src="https://m.media-amazon.com/images/M/MV5BNDA5YzlhNjItMDgxNC00MjQ4LWIzMDMtYTUyMzBhNjViNDk3XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" style=width:180px height=220px>
+              <P><b>HUKUM</b></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://naasongs.to/wp-content/uploads/2023/07/Rules-Ranjann-2023-Sammohanuda.jpg" style=width:250px height=220px>
+            <P><b>SAMMOHANUDA</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDA5YzlhNjItMDgxNC00MjQ4LWIzMDMtYTUyMzBhNjViNDk3XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" style=width:250px height=220px>
+            <P><b>RATHAMAAREY</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://c.saavncdn.com/009/Hungry-Cheetah-From-They-Call-Him-OG-Tamil-Tamil-2023-20230903132758-500x500.jpg" style=width:250px height=220px>
+            <P><b>HUNGRY CHEETAH</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://kolkatametro.in/wp-content/uploads/2023/08/hd-wallpaper-jawan-1.jpg" style=width:250px height=220px>
+            <P><b>JAWAN</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+
+        </tr>
+        <tr>
+          <td><div class="card">
+            <img src="https://media5.bollywoodhungama.in/wp-content/uploads/2023/08/Khushi-01.jpg" style=width:250px height=220px>
+            <P><b>KUSHI </b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+        </td>
+        </tr>
+    </table>
+    <table id="table" name="table" align="center">
+        <caption><h2>MOVIES</h2></caption>
+        <tr>
+          <td>
+            <div class="card">
+              <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2019/03/RRR-2022.jpeg" style=width:250px height=260px>
+              <P><b>RRR</b></P>
+              <a href="" class="play-button">Play</a>
+              <a href="rrr.mkv" class="download-button">Download</a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://m.media-amazon.com/images/M/MV5BNmM2ZTA4NDktZDdkNS00ZmU3LTk3ZjYtMzZmZjhlODZlYzM2XkEyXkFqcGdeQXVyMTUwMDg3OTQy._V1_.jpg" style=width:250px height=260px>
+              <P><B>BHEEMLA NAYAK</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://e1.pxfuel.com/desktop-wallpaper/916/317/desktop-wallpaper-kgf-chapter-2-a-marvellous-extravaganza-that-stay-true-to-the-hype-despite-minor-glitches-kgf-chapter-2-poster.jpg" style=width:250px height=260px>
+              <P><B>KGF PART-2</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://www.filmibeat.com/ph-big/2023/06/bro-2023_168810266830.jpg" style=width:250px height=260px>
+              <P><B>BRO</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://th-i.thgim.com/public/incoming/tkhqua/article66284500.ece/alternates/FREE_1200/baby%20%282%29.jpg" style=width:250px height=260px>
+              <P><B>BABY
+              </B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+            </td>
+        </tr>
+        <tr>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://m.media-amazon.com/images/M/MV5BYTIyMWJjMDMtMTI5ZS00MWZiLTg4NDktMDFhODU3NWMyOTk4XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg" style=width:250px height=260px>
+              <P><B>SITA RAMAM</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://m.media-amazon.com/images/M/MV5BMjQ1MjFkN2EtOTU4NS00NDkzLThhNzItODkzYWNjZDMxZjE0XkEyXkFqcGdeQXVyNTgxODY5ODI@._V1_.jpg" style=width:250px height=260px>
+              <P><B>RANGASTHALAM</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2021/07/10/273e787ba809e725948334340c658e68_original.jpg" style=width:250px height=260px>
+              <P><B>VIKRAM</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://files.prokerala.com/movies/pics/800/movie-designs-102549.jpg" style=width:250px height=260px>
+              <P><B>JERSEY</B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+          <td>
+            <div class="card">
+              <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/arjun-reddy-et00050049-03-12-2016-05-38-04.jpg" style=width:250px height=260px>
+              <P><B>ARJUN REDDY
+              </B></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+    
+          </td>
+        </tr>
+    </table>
+    <table align="center">
+        <caption><H2>SPORTS</H2></caption>
+        <tr><td>
+            <div class="card">
+                <img src="https://i.ytimg.com/vi/NcOFdfG4re8/maxresdefault.jpg" style=width:250px height=220px>
+                <P><b>IND VS AUS <BR>ODI 24 SEP</b></P>
+                <a href="#" class="play-button">Play</a>
+                <a href="#" class="download-button">Download</a>
+              </div>
+        </td></tr>
+    </table>
+
+
+
+
+</body>
+</html>

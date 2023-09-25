@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV-SHOWS</title>
+    <link rel="stylesheet" href="SHOWS.css">
+</head>
+<body background="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjB0ZXh0dXJlfGVufDB8fDB8fHww&w=1000&q=80" style="background-repeat: no-repeat; background-size: cover;">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="SHOWS.html">TV SHOWS</a></li>
+            <li><a href="MOVIES.html">MOVIES</a></li>
+            <li><a href="MUSIC.html">SONGS</a></li>
+            <li><a href="SPORTS.html">SPORTS</a></li>
+        </ul>
+        
+    </div>
+    <div class="slideshow-container" align="center">
+        <div class="slideshow-card">
+            <img src="https://www.breezemasti.com/wp-content/uploads/Karthika-Deepam-serial-cast-episode-story-and-more.jpg" alt="Movie 1"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-card">
+            <img src="Biggboss7.webp" alt="Movie 2"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-card">
+            <img src="GOT.jpg" alt="Movie 3"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="rrr.mkv" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slideshow-card");
+            const dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = "dot";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+        }
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+        function autoSlide() {
+            showSlide(slideIndex += 1);
+        }
+        setInterval(autoSlide, 3000);
+        showSlide(slideIndex);
+    </script><br><br>
+    <table align="center">
+        <tr>
+          <td>
+            <div class="card">
+              <img src="https://wallpapercave.com/wp/wp4404428.jpg" style=width:180px height=220px>
+              <P><b>GOT</b></P>
+              <a href="#" class="play-button">Play</a>
+              <a href="#" class="download-button">Download</a>
+            </div>
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://wallpapers.com/images/featured/stranger-things-phone-rtnqrfsnfhgleaiw.jpg" style=width:180px height=220px>
+            <P><b>STRANGER THINGS</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://images.hdqwalls.com/download/4k-money-heist-netflix-2019-9f-1125x2436.jpg" style=width:180px height=220px>
+            <P><b>MONEY HEIST</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://i.pinimg.com/originals/ed/2f/5c/ed2f5c71bcc73a1bf4a4fbae736919af.jpg" style=width:180px height=220px>
+            <P><b>CHINNARI PELLIKUTHURU</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+          <td>              <div class="card">
+            <img src="https://i.pinimg.com/1200x/a7/2c/cd/a72ccd16df2fcc3c9a5bbcac1f5f588d.jpg" style=width:180px height=220px>
+            <P><b>PEAKY BLINDERS</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+
+
+          </td>
+
+        </tr>
+        <tr>
+          <td><div class="card">
+            <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2023/01/Farzi-3.jpg" style=width:180px height=220px>
+            <P><b>FARZI</b></P>
+            <a href="#" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+          </div>
+        </td>
+        <td><div class="card">
+          <img src="https://cdn.siasat.com/wp-content/uploads/2022/07/Bigg-Boss-16.jpg" style=width:180px height=220px>
+          <P><b>BIGG BOSS</b></P>
+          <a href="#" class="play-button">Play</a>
+          <a href="#" class="download-button">Download</a>
+        </div></td>
+        <td><div class="card">
+          <img src="https://wallpaperaccess.com/full/1984236.jpg" style=width:180px height=220px>
+          <P><b>BREAKING BAD</b></P>
+          <a href="#" class="play-button">Play</a>
+          <a href="#" class="download-button">Download</a>
+        </div></td>
+        <td><div class="card">
+          <img src="https://wallpapers.com/images/featured/one-piece-phone-beu8vxkxxywm5vsf.jpg" style=width:180px height=220px>
+          <P><b>ONE-PIECE</b></P>
+          <a href="#" class="play-button">Play</a>
+          <a href="#" class="download-button">Download</a>
+        </div></td>
+        </tr>
+      </table>
+
+
+</body>
+</html>

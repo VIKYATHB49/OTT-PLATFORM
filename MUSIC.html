@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUSIC</title>
+    <link rel="stylesheet" href="MUSIC.css">
+</head>
+<body background="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjB0ZXh0dXJlfGVufDB8fDB8fHww&w=1000&q=80" style="background-repeat: no-repeat; background-size: cover;">
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="SHOWS.html">TV SHOWS</a></li>
+            <li><a href="MOVIES.html">MOVIES</a></li>
+            <li><a href="MUSIC.html">SONGS</a></li>
+            <li><a href="SPORTS.html">SPORTS</a></li>
+        </ul>
+        
+    </div>
+    <div class="slideshow-container" align="center">
+        <div class="slideshow-card">
+            <img src="https://www.pinkvilla.com/images/2023-06/990020216_thalapathy-vijay-leo-first-single-naa-ready-poster.jpg" alt="song 1" style="background-size: contain;"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/493/754/324/movies-bollywood-movies-wallpaper-preview.jpg" alt="Movie 3"><br><br>
+            <a href="" class="play-button">Play</a>
+            <a href="#" class="download-button">Download</a>
+        </div>
+        <div class="slideshow-dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    <script>
+        let slideIndex = 1;
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("slideshow-card");
+            const dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = "dot";
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+        }
+        function currentSlide(n) {
+            showSlide(slideIndex = n);
+        }
+        function autoSlide() {
+            showSlide(slideIndex += 1);
+        }
+        setInterval(autoSlide, 3000);
+        showSlide(slideIndex);
+    </script><br><br>
+            <table align="center">
+                <tr>
+                  <td>
+                    <div class="card">
+                      <img src="https://m.media-amazon.com/images/M/MV5BNDA5YzlhNjItMDgxNC00MjQ4LWIzMDMtYTUyMzBhNjViNDk3XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" style=width:250px height=220px>
+                      <P><b>HUKUM</b></P>
+                      <a href="#" class="play-button">Play</a>
+                      <a href="#" class="download-button">Download</a>
+                    </div>
+      
+                  </td>
+                  <td>              <div class="card">
+                    <img src="https://naasongs.to/wp-content/uploads/2023/07/Rules-Ranjann-2023-Sammohanuda.jpg" style=width:250px height=220px>
+                    <P><b>SAMMOHANUDA</b></P>
+                    <a href="#" class="play-button">Play</a>
+                    <a href="#" class="download-button">Download</a>
+                  </div>
+      
+      
+                  </td>
+                  <td>              <div class="card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDA5YzlhNjItMDgxNC00MjQ4LWIzMDMtYTUyMzBhNjViNDk3XkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" style=width:250px height=220px>
+                    <P><b>RATHAMAAREY</b></P>
+                    <a href="#" class="play-button">Play</a>
+                    <a href="#" class="download-button">Download</a>
+                  </div>
+      
+      
+                  </td>
+                  <td>              <div class="card">
+                    <img src="https://c.saavncdn.com/009/Hungry-Cheetah-From-They-Call-Him-OG-Tamil-Tamil-2023-20230903132758-500x500.jpg" style=width:250px height=220px>
+                    <P><b>HUNGRY CHEETAH</b></P>
+                    <a href="#" class="play-button">Play</a>
+                    <a href="#" class="download-button">Download</a>
+                  </div>
+      
+      
+                  </td>
+                  <td>              <div class="card">
+                    <img src="https://kolkatametro.in/wp-content/uploads/2023/08/hd-wallpaper-jawan-1.jpg" style=width:250px height=220px>
+                    <P><b>JAWAN</b></P>
+                    <a href="#" class="play-button">Play</a>
+                    <a href="#" class="download-button">Download</a>
+                  </div>
+      
+      
+                  </td>
+  
+                </tr>
+                <tr>
+                  <td><div class="card">
+                    <img src="https://media5.bollywoodhungama.in/wp-content/uploads/2023/08/Khushi-01.jpg" style=width:250px height=220px>
+                    <P><b>KUSHI </b></P>
+                    <a href="#" class="play-button">Play</a>
+                    <a href="#" class="download-button">Download</a>
+                  </div>
+                </td>
+                <td><div class="card">
+                  <img src="https://c4.wallpaperflare.com/wallpaper/493/754/324/movies-bollywood-movies-wallpaper-preview.jpg" style=width:250px height=220px>
+                  <P><b>PO-VE-PO</b></P>
+                  <a href="#" class="play-button">Play</a>
+                  <a href="#" class="download-button">Download</a>
+                </div></td>
+                <td><div class="card">
+                  <img src="https://wallpapercave.com/wp/wp12185319.jpg" style=width:250px height=220px>
+                  <P><b>NAA READY</b></P>
+                  <a href="#" class="play-button">Play</a>
+                  <a href="#" class="download-button">Download</a>
+                </div></td>
+                <td><div class="card">
+                  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8Ub5d-AJDKu6IuolsNJNbURjNVUATtEhlPWwldc6wwzhnnkTwhe0mUDY7FvkxpxoT4CFhxiieYLXBcyNWZggKbtqvWRMuELMPoEVBv8nPmzXyj4dwt7wYc03Eb_AvIsAhGg55-cOW3LYITjLWGX7290z8W0TzjW_kDEcLv4Dvi4GTRK5zXlw4nQBivQ/s0/Adhipursh%20HDgallery.jpeg" style=width:250px height=220px>
+                  <P><b>JAI SHREE RAM</b></P>
+                  <a href="#" class="play-button">Play</a>
+                  <a href="#" class="download-button">Download</a>
+                </div></td>
+                </tr>
+              </table>
+      
+
+
+</body>
+</html>
